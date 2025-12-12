@@ -23,16 +23,12 @@ import { map, startWith } from 'rxjs/operators';
         </a>
       </div>
 
-      <div class="filters card">
-        <div class="search-box">
-          <input 
-            type="text" 
-            [formControl]="searchControl" 
-            placeholder="Buscar por nombre o correo..."
-          >
-          <span class="icon">🔍</span>
-        </div>
-      </div>
+<div class="search-container">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input type="text" placeholder="Buscar voluntario por nombre o correo..." />
+  </div>
+</div>
 
       <div class="grid-container">
         @if (filteredVolunteers$ | async; as volunteers) {
@@ -66,30 +62,44 @@ import { map, startWith } from 'rxjs/operators';
     </div>
   `,
   styles: [`
-    /* Using new Design System globals automatically */
-    .filters {
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      background: white;
-    }
+  .search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
 
-    .search-box {
-      position: relative;
-      max-width: 500px;
-      
-      input {
-        padding-left: 3rem; 
-      }
-      
-      .icon {
-        position: absolute;
-        left: 1.2rem;
-        top: 50%;
-        transform: translateY(-50%);
-        color: var(--text-muted);
-        font-size: 1.1rem;
-      }
-    }
+.search-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  width: 85%;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+}
+
+.search-box:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.search-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  opacity: 0.6;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
 
     .grid-container {
       display: grid;

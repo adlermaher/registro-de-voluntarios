@@ -10,7 +10,7 @@ import { AuthService } from '../../../core/services/auth.service';
   template: `
     <nav class="navbar" *ngIf="authService.user$ | async">
       <div class="nav-brand">
-        <a routerLink="/dashboard">VolunteerHub</a>
+        <a routerLink="/dashboard">VOLUNTARIOS HUB</a>
       </div>
       
       <div class="nav-links">

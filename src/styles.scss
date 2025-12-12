@@ -16,8 +16,7 @@
   /* Blue to Cyan */
   --accent-glow: rgba(59, 130, 246, 0.4);
 
-  --background-color: #f8fafc;
-  /* Slate 50 */
+  --background-color: #6083a8;
   --card-bg: #ffffff;
 
   --text-main: #0f172a;
@@ -59,7 +58,7 @@ body {
   min-height: 100vh;
 }
 
-/* Typography Utilities */
+
 h1,
 h2,
 h3,
@@ -91,9 +90,7 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Premium Components Base */
 
-/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
