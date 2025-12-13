@@ -1,59 +1,79 @@
-# RegistroVoluntarios
+#  Registro de Voluntarios – Aplicación Web Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
+Aplicación web desarrollada en **Angular** para la gestión de voluntarios y actividades, permitiendo registrar, visualizar, editar y eliminar información de manera segura y ordenada. El sistema está orientado a organizaciones que requieren administrar equipos de voluntarios de forma eficiente.
 
-## Development server
 
-To start a local development server, run:
+## Tecnologías Utilizadas
+
+- **Angular** (Framework frontend)
+- **TypeScript** (Lenguaje principal)
+- **HTML5** y **CSS3** (Estructura y estilos)
+- **Angular Standalone Components**
+- **Angular Router** (Navegación)
+- **Reactive Forms** (Formularios reactivos)
+- **RxJS** (Programación reactiva)
+- **Firebase Authentication** (Autenticación de usuarios)
+- **Firebase Firestore** (Base de datos NoSQL)
+- **Firebase Hosting** (Despliegue de la aplicación)
+- **Git & GitHub** (Control de versiones)
+
+---
+
+## Requisitos para Instalar y Ejecutar el Proyecto
+
+Antes de ejecutar el proyecto, asegúrate de tener instalado:
+
+- **Node.js**
+- **Angular CLI**
+- **Git**
+- Navegador web moderno
+
+### 🔧 Instalación de Angular CLI
 
 ```bash
+npm install -g @angular/cli
+
+## Instalación y Ejecución del Proyecto
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/adlermaher/registro-de-voluntarios
+
+cd registro-de-voluntarios
+npm install
 ng serve
-```
+## URL Del hosting
+https://registro-voluntarios-3f8d7-default-rtdb.firebaseio.com/
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Arquitectura del Proyecto
 
-## Code scaffolding
+La aplicación utiliza una arquitectura basada en componentes y servicios, siguiendo las buenas prácticas del framework Angular.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Componentes Principales
 
-```bash
-ng generate component component-name
-```
+AppComponent: Componente raíz de la aplicación.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+NavbarComponent: Barra de navegación principal.
 
-```bash
-ng generate --help
-```
+VolunteerListComponent: Listado y búsqueda de voluntarios.
 
-## Building
+VolunteerFormComponent: Registro y edición de voluntarios.
 
-To build the project run:
+ActivityComponents: Gestión de actividades.
 
-```bash
-ng build
-```
+AuthComponents: Inicio y cierre de sesión.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Servicios
 
-## Running unit tests
+AuthService: Gestión de autenticación mediante Firebase Authentication.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+VolunteerService: Operaciones CRUD de voluntarios usando Firestore.
 
-```bash
-ng test
-```
+ActivityService: Gestión de actividades.
 
-## Running end-to-end tests
+Guards de autenticación para la protección de rutas.
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+La comunicación entre componentes y servicios se realiza mediante Observables (RxJS).
+## URL Del hosting
+https://registro-voluntarios-3f8d7-default-rtdb.firebaseio.com/
